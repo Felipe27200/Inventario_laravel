@@ -12,6 +12,9 @@ use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 
+
+use App\Models\Permiso;
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -26,8 +29,14 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+
+    /*
+        Aquí es donde se definen los datos que deberán ser ingresados
+        para realizar el registro de un usuario, es decir, se indican
+        las columnas a las que se les insertara información.
+    */
     protected $fillable = [
-        'name', 'email', 'password',
+        'id', 'permiso_id', 'name', 'email', 'password',
     ];
 
     /**

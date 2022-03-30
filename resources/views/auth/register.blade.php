@@ -10,6 +10,16 @@
             @csrf
 
             <div>
+                <x-jet-label for="id" value="{{ __('Id') }}" />
+                <x-jet-input id="id" class="block mt-1 w-full" type="number" name="id" :value="old('id')" required autofocus autocomplete="id" />
+            </div>
+
+            <div>
+                <x-jet-label for="permiso" value="{{ __('Permiso')}}"/>
+                <x-select-permisos/>
+            </div>
+
+            <div>
                 <x-jet-label for="name" value="{{ __('Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
