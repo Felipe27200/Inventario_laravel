@@ -10,6 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -58,4 +59,27 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /*
+        Aquí se define la relación inversa entre
+        permisos y user, de esta forma se permite
+        que al usar el modelo de users se pueda
+        hacer una busqueda de los permisos que coincidan
+        con la llave foránea permiso_id en user.
+    */
+    public function permiso()
+    {
+        return $this->belongsTo(Permiso::class);
+    }
+
+    /*
+        RELACIÓN ONE TO MANY
+        
+        Se asume que la tabla productos es la que tiene
+        la llave foránea de users.
+    */
+    public function producto()
+    {
+        return $this->hasMany(Producto::class);
+    }
 }
