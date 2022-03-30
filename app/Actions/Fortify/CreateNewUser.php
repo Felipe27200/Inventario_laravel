@@ -34,15 +34,12 @@ class CreateNewUser implements CreatesNewUsers
 
         return DB::transaction(function () use ($input) {
             return tap(User::create([
-                'id' => $input['id'],
+                'identificacion' => $input['id'],
                 'permiso_id' => $input['permiso'],
                 'name' => $input['name'],
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
             ]), function (User $user) {
-
-                file_put_contents("datos_user.json", json_encode($user));
-                
                 $this->createTeam($user);
             });
         });

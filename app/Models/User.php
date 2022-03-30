@@ -36,7 +36,7 @@ class User extends Authenticatable
         las columnas a las que se les insertara información.
     */
     protected $fillable = [
-        'id', 'permiso_id', 'name', 'email', 'password',
+        'permiso_id', 'identificacion', 'name', 'email', 'password',
     ];
 
     /**
