@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('categorias', function (Blueprint $table)
         {
             $table->bigIncrements('categoria_id');
-            $table->string('nombre_categoria', 250);
+            $table->string('nombre_categoria', 250)->unique();
         });
     }
 
