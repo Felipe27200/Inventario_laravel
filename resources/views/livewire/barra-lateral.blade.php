@@ -1,9 +1,9 @@
-<div class="col-span-2 pl-3 bg-gray-200 pb-3" x-show="open">
+<div class="col-span-2 pl-3 bg-sky-100 pb-3" x-show="open">
         @if(Auth::user()->permiso_id == 2)
 
         <ul>
             <h1 class="text-lg font-bold mt-2 mb-1">Categorías</h1>
-            <li class="mb-1 lg:mb-0"><x-elementos.link href="#">Ver categorías</x-elementos.link></li>
+            <li class="mb-1 lg:mb-0"><x-elementos.link href="{{ route('categoria.index') }}">Ver categorías</x-elementos.link></li>
             <li class="mb-1 lg:mb-0"><x-elementos.link href="{{ route('categoria.create') }}">Agregar Categorías</x-elementos.link></li>
             <li class="mb-1 lg:mb-0"><x-elementos.link href="#">Eliminar Categorías</x-elementos.link></li>
 

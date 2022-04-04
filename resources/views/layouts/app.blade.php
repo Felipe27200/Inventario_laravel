@@ -19,7 +19,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <div x-data="{ open: false }">
+        <div x-data="{ open: true }">
             @livewire('nav-menu')
 
             <div class="grid grid-cols-12">

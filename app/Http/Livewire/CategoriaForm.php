@@ -15,6 +15,14 @@ class CategoriaForm extends Component
 
     // Se validan los valores de las propiedades
     protected $rules = ['nuevaCategoria' => 'required'];
+
+    /*
+        De esta forma se personalizan los mensajes de error en los 
+        comentarios, se necista un array asociativo, en este, 
+        la clase es el nombre de la variable que almacena el input con 
+        separador punto y el nombre de la restricción y el valor 
+        es el mensaje de error para esa restricción.
+    */
     protected $messages = [
         'nuevaCategoria.required' => 'Debe ingresar el nombre de la categoría',
     ];

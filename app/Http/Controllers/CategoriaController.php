@@ -7,9 +7,12 @@ use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
-    public function create(){
-        $categoria = new Categoria();
+    public function index()
+    {
+        return view('categoria.index');
+    }
 
+    public function create(){
         return view('categoria.create');
     }
 }

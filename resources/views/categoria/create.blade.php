@@ -9,7 +9,6 @@
             <h1 class="text-center my-4 font-bold text-xl">Agregar Categoría</h1>
 
                 @livewire('categoria-form')
-
         </div>
     </x-slot>
 

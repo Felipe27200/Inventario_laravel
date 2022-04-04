@@ -24,6 +24,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::post('agregarcategoria', [CategoriaForm::class, 'store']);
-
 Route::resource('categoria', CategoriaController::class)->middleware(['auth:sanctum', 'verified']);

@@ -1,5 +1,11 @@
 <form class="w-full max-w-full pr-2" wire:submit.prevent="store" method="POST">
   @csrf
+
+  {{-- 
+    flex es la clase que permite definir como se envolverán los grid y demás,
+    también es la clase que permite acomodar el contenido de filas y columnas dentro
+    de un estos.  
+  --}}
   <div class="flex flex-wrap justify-center -mx-3 mb-3">
     <div class="w-full md:w-2/4 lg:w-1/3 px-3 mb-6 md:mb-0">
       <label class="block tracking-wide text-gray-700 text-md font-bold mb-2" for="categoria">
