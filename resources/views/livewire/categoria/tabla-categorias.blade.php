@@ -1,5 +1,5 @@
 <div class="flex justify-center">
-    <div class="w-3/4 relative overflow-x-auto shadow-md sm:rounded-lg flex flex-col">
+    {{-- <div class="w-3/4 relative overflow-x-auto shadow-md sm:rounded-lg flex flex-col">
         <div class="p-4">
             <label for="table-search" class="sr-only">Search</label>
             <div class="relative mt-1">
@@ -43,5 +43,6 @@
         </table>
 
         {{ $categorias->links() }}
-    </div>
+    </div> --}}
+    <livewire:datatable model="App\Models\Categoria" name="categorias"/>
 </div>
